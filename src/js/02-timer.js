@@ -7,7 +7,7 @@ let intervalId = null;
 let selectedDate = null;
 let currentDate = null;
 const calendar = document.querySelector('#datetime-picker');
-const startBtn = document.querySelector('[data-start-timer]');
+const startBtn = document.querySelector('[data-start');
 startBtn.disabled = true;
 
 Report.info(
@@ -30,9 +30,7 @@ flatpickr(calendar, {
       );
     } else {
       Report.success(
-        '🥰 Congratulation! Click on start!',
-        '"Do not try to become a person of success but try to become a person of value." <br/><br/>- Albert Einstein',
-        'Okay'
+        '🥰 Congratulation! Click on start!'
       );
       startBtn.disabled = false;
       const setTimer = () => {
