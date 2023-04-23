@@ -38,16 +38,18 @@ function onPromiseCreate(e) {
     createPromise(i, inputDelay)
       .then(({ position, delay }) => {
         Notify.success(
-          `вњ… Fulfilled promise ${position} in ${delay}ms`,
+          ` Fulfilled promise ${position} in ${delay}ms`,
           options
         );
       })
       .catch(({ position, delay }) => {
         Notify.failure(
-          `вќЊ Rejected promise ${position} in ${delay}ms`,
+          ` Rejected promise ${position} in ${delay}ms`,
           options
         );
       });
     e.currentTarget.reset();
   }
 }
+
+
