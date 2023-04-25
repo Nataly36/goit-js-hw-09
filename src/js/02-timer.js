@@ -3,7 +3,7 @@ import "flatpickr/dist/flatpickr.min.css";
 import { Report } from 'notiflix/build/notiflix-report-aio';
 
 const TIMER_DELAY = 1000;
-let S_DATA = selectedDates[0];
+const S_DATA = 'selectedDates[0]';
 let intervalId = null;
 let selectedDate = null;
 let currentDate = null;
