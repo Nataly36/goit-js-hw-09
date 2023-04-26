@@ -3,7 +3,7 @@ import "flatpickr/dist/flatpickr.min.css";
 import { Report } from 'notiflix/build/notiflix-report-aio';
 
 const TIMER_DELAY = 1000;
-S_DATA = 'selectedDates[0]';
+let S_DATA = 'selectedDates[0]';
 let intervalId = null;
 let selectedDate = null;
 let currentDate = null;
@@ -24,7 +24,7 @@ flatpickr(calendar, {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    let S_DATA = selectedDates[0];
+    S_DATA = selectedDates[0];
     if (S_DATA.getTime() < Date.now()) {
       Report.failure(
         '🥺 Ooops...',
