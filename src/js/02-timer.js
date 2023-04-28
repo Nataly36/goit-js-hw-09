@@ -32,7 +32,7 @@ const options = {
         'Okay'
       );
     } else {
-      selectedDate = selectedDates[0].getTime();
+      S_DATA = selectedDates[0].getTime();
       startBtn.disabled = false;
       Report.success(
         '🥰 Congratulation! Click on start!',
@@ -75,7 +75,7 @@ const counter = {
   start() {
     intervalId = setInterval(() => {
       currentDate = Date.now();
-      const deltaTime = selectedDate - currentDate;
+      const deltaTime = S_DATA - currentDate;
       updateTimerface(convertMs(deltaTime));
       startBtn.disabled = true;
       flatpickrInput.disabled = true;
