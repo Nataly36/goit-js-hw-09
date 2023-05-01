@@ -4,6 +4,9 @@ import { Report } from 'notiflix/build/notiflix-report-aio';
 
 const TIMER_DELAY = 1000;
 let S_DATA = 'selectedDates[0]';
+let intervalId = null;
+
+let currentDate = null;
 
 
 
@@ -73,7 +76,7 @@ function convertMs(ms) {
 
 const counter = {
   start() {
-    let intervalId = setInterval(() => {
+    intervalId = setInterval(() => {
     let   currentDate = Date.now();
       const deltaTime = S_DATA - currentDate;
       updateTimerface(convertMs(deltaTime));
