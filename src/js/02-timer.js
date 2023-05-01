@@ -73,8 +73,8 @@ function convertMs(ms) {
 
 const counter = {
   start() {
-    intervalId = setInterval(() => {
-      currentDate = Date.now();
+    let intervalId = setInterval(() => {
+    let   currentDate = Date.now();
       const deltaTime = S_DATA - currentDate;
       updateTimerface(convertMs(deltaTime));
       startBtn.disabled = true;
